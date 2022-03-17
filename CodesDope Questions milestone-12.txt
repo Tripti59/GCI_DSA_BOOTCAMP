@@ -1,0 +1,226 @@
+GCI
+MILESTONE-12
+CODESDOPE QUESTIONS
+
+Q-1 Input integers, store them and print
+code:-   
+    Scanner sc = new Scanner(System.in);
+    int[] arr = new int[10];
+    for(int i = 0;i<arr.length;i++){
+      System.out.println("Print the value of arr["+i+"]");
+      arr[i] = sc.nextInt();
+    }
+    for(int i = 0;i<arr.length;i++){
+      System.out.println("The value of arr["+i+"] is "+arr[i]);
+    }
+  }
+
+Q-2 LINEAR SEARCH
+CODE:-
+	System.out.println("Enter the element to search it in array");
+	int search=sc.nextInt();
+	int ans=searchElement(arr,search);
+	if (ans==-1) {
+		System.out.println("Element not found in array");
+	}
+	else {
+		System.out.println("Found at "+ ans);
+	}
+
+Q-3 number of positive numbers
+CODE:-
+	//Counting number of positive integers in array
+	static int countPositive(int [] array) {
+	int count=0;
+	for(int i=0; i< array.length; i++) {
+		if(array[i]>=0) {
+			count++;
+		}
+	}
+	return count;
+	}
+
+number of negative numbers
+CODE:-
+//Counting number of negative integers in array
+static int countNegative(int [] array) {
+	int count=0;
+	for(int i=0; i< array.length; i++) {
+		if(array[i]<0) {
+			count++;
+	     }
+	}
+	return count;
+	}
+
+number of odd numbers
+CODE:-
+	static int countOdd(int [] array) {
+	int count=0;
+	for(int i=0; i< array.length; i++) {
+		if(array[i]%2 != 0) {
+			count++;
+		}
+	}
+	return count;
+}
+
+number of even numbers
+CODE:-
+//Counting number of even numbers in array
+static int countEven(int [] array) {
+	int count=0;
+	for(int i=0; i< array.length; i++) {
+		if(array[i]%2==0) {
+			count++;
+		}
+	}
+	return count;
+	}
+
+number of 0s.
+CODE:-
+	//Counting number of Zero's in array
+static int countZero(int [] array) {
+	int count=0;
+	for(int i=0; i< array.length; i++) {
+		if(array[i]==0) {
+			count++;
+		}
+	}
+	return count;
+}
+
+Q-4: copy all the elements in an another array but in reverse order.
+CODE:-
+	//Storing elements in reverse order in another array
+	int [] newArr=new int [arr.length];
+	for(int i=arr.length-1;i>=0;i--) {
+		newArr[i]=arr[arr.length-1-i];
+	}
+	for(int each:newArr) {
+		System.out.println(each+" ");
+	}
+
+Q-5: find the sum and product of all elements of an array.
+CODE:-
+//Sum of  numbers in array
+static int getSum(int [] array) {
+int count=0;
+for(int i=0; i< array.length; i++) {
+	count+=array[i];
+}
+return count;
+}
+	
+//Product of  numbers in array
+static int getProduct(int [] array) {
+int count=1;
+for(int i=0; i< array.length; i++) {
+	count*=array[i];
+	}
+	return count;
+	}
+
+
+Q-7: largest and smallest elements of an array.
+CODE:-
+//Largest number in array
+static int getLargest(int [] array) {
+	int largest=array[0];
+	for(int i=0; i< array.length; i++) {
+		if(array[i]>largest) {
+			largest=array[i];
+		}
+	}
+	return largest;
+}
+	
+//Smallest number in array
+static int getSmallest(int [] array) {
+	int smallest=array[0];
+	for(int i=0; i< array.length; i++) {
+		if(array[i]<smallest) {
+			smallest=array[i];
+		}
+	}
+	return smallest;
+	}
+
+		
+Q-8: if elements of an array are same or not it read from front or back
+CODE:-
+//Function for checking if the elements from front and back read same i.e. palindrome 
+static boolean checkPalindrome(int [] array) {
+	if(array.length==1) {
+		return true;
+	}
+	for(int i=0; i<(array.length)/2; i++) {
+		if(array[i]==array[array.length-1-i]) {
+			return true;
+		}
+	}
+	return false;
+	}
+
+Q-9:Split Array from middle and store the elements in two dfferent arrays.
+CODE:
+static void splitArr(int [] array) {
+	//Step1:Creating two arrays of length half the original array's length
+	int [] arr1=new int [array.length/2];
+	int [] arr2=new int [array.length/2];
+		
+	//Step2:Splitting & adding values in both arrays
+	System.out.println("array.len= "+array.length);
+	for(int i=0;i<=(array.length-1)/2;i++) {		
+		arr1[i]=array[i];			
+	}
+	int k=0;
+	for(int i=((array.length-1)/2)+1;i<array.length;i++) {		
+		arr2[k]=array[i];
+		k++;
+		}
+		
+		System.out.println("ARRAY-1");
+		for(int each:arr1) {
+			System.out.println(each+"  ");
+		}
+		System.out.println("ARRAY-2");
+		for(int each:arr2) {
+			System.out.println(each+"  ");
+		}
+
+Q-10:find those pair of elements that has the maximum and minimum difference among all element pairs.
+CODE:-
+[Not coded because coded earlier]
+APPROACH:
+SAMPLE ARRAY=[2,4,6,8,10]
+PAIRS WITH MINIMUM DIFF= 2 AND 4; 4-2=2, HERE 2 IS SMALLEST AND 4 IS SECOND SMALLEST
+PAIRS WITH MINIMUM DIFF=SMALLEST-SECOND SMALLEST
+PAIRS WITH MAX DIFF= 2 & 10; 2-10=-8; HERE 2 IS SMALLEST AND 10 IS LARGEST
+PAIRS WITH MAXIMUM DIFF= SMALLEST-LARGEST
+THUS, WE NEED SECOND SMALLEST, SMALLEST AND LARGEST ELEMENT.
+
+
+Q-11:find that the subarray
+CODE:-
+//Printing or creating sub array from given indices
+System.out.println("Enter begining index: ");
+int start=sc.nextInt();
+System.out.println("Enter endining index: ");
+int end=sc.nextInt();
+if(end>start) {
+	int [] subArr=new int [end-start];
+	int k=0;
+	for(int i=start;i<=end;i++) {
+		subArr[k]=arr[i];
+		k++;
+	}
+}
+else if(end==start) {
+	int [] subArr= new int [1];
+	subArr[0]=arr[start];
+}
+else {
+	System.out.println("Operation not possible.. enter valid indices");
+}

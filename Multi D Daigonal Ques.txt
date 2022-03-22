@@ -1,3 +1,8 @@
+MILESTONE-13
+MULTI-DIMENSIONAL ARRAY
+
+
+Question-2
 Principal and Secondary diagonals of this matrix. 
 
 CODE:-

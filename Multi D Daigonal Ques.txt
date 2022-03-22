@@ -1,0 +1,27 @@
+Principal and Secondary diagonals of this matrix. 
+
+CODE:-
+	for(int i=0;i<r;i++) {
+		for(int j=0; j<c;j++) {
+			System.out.print(arr[i][j]+"  ");
+				}
+		System.out.println();
+		}
+	System.out.println("Primary daigonal elements are-");
+	for(int i=0;i<r;i++) {
+		for(int j=0; j<c;j++) {
+			if(i==j) 
+			{
+			System.out.println(arr[i][j]);
+				}
+			}}
+			
+System.out.println("Secondary daigonal elements are-");
+	for(int i=0;i<r;i++) {
+		for(int j=0; j<c;j++) {
+			if(i+j==r-1) 
+			{
+				System.out.println(arr[i][j]);
+			}
+				}
+		}

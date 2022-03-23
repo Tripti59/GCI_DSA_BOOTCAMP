@@ -1,0 +1,30 @@
+MILESTONE-13
+MULTI-DIMENSIONAL ARRAY
+
+
+Question-3
+Find the product of the elements of the left and right diagonal.
+CODE:
+		int prim=1;
+		int secon=1;
+		for(int i=0;i<r;i++) {
+			for(int j=0; j<c;j++) {
+				System.out.print(arr[i][j]+"  ");
+				}
+			System.out.println();
+			}
+		for(int i=0;i<r;i++) {
+			for(int j=0; j<c;j++) {
+				if(i==j) {
+					prim *=arr[i][j];
+				}
+			}}
+			for(int i=0;i<r;i++) {
+				for(int j=0; j<c;j++) {
+					if(i+j==r-1) {
+						secon *=arr[i][j];
+					}
+				}
+		}
+			System.out.println("Primary daigonal element's product is= "+prim);
+			System.out.println("Secondary daigonal element's product= "+secon);

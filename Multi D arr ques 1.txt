@@ -1,0 +1,45 @@
+MILESTONE-13/9
+MULTI-DIMENSIONAL ARRAY
+
+QUES:
+1) number of positive numbers
+2) number of negative numbers
+3) number of odd numbers
+4) number of even numbers
+5) number of 0s.
+
+
+CODE:
+	//Iterating through array to get
+		int zero=0;
+		int odd=0;
+		int even=0;
+		int neg=0;
+		int pos=0;
+		for(int i=0;i<r;i++) {
+			for(int j=0; j<c;j++) {
+				System.out.print(arr[i][j]+"  ");
+				if(arr[i][j]==0) {
+					zero++;
+				}
+				else if(arr[i][j]>0) {
+					pos++;
+				}
+				else {
+					neg++;
+				}
+				if(arr[i][j]%2==0) {
+					even++;
+				}
+				else {
+					odd++;
+				}
+				}
+			System.out.println();
+			}
+		System.out.println("Number of zeros= "+zero);
+		System.out.println("Number of Positive values= "+pos);
+		System.out.println("Number of Negative values= "+neg);
+		System.out.println("Number of odd values= "+odd);
+		System.out.println("Number of even values= "+even);
+	}
